@@ -1,0 +1,2 @@
+state.z = []; state.x=[]; state.y=[];
+state.phi=[]; state.theta=[]; state.psi=[];

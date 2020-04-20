@@ -1,0 +1,6 @@
+function v = func_Kf_y_order3(t, t_array, z_array, t_i, a, l0, l1, l2)
+    z = interp1(t_array,z_array,t);
+    v = ( 9*((t-a).^2) - l2.*((t-a).^3)...
+        + (t_i-t).*(-18*(t-a) + 6*l2.*((t-a).^2) - l1.*((t-a).^3))...
+        + 0.5*((t_i-t).^2).*(6 - 6*l2*(t-a) + 3*l1.*((t-a).^2) - l0.*((t-a).^3))).*z;
+end

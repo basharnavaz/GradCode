@@ -1,0 +1,6 @@
+function v = squared_Kb_z_order3(t, t_i, b, l0, l1, l2)
+%     z = interp1(t_array,z_array,t);
+    v = ( 9*((b-t).^2) + l2.*((b-t).^3)...
+        + (t_i-t).*(18*(b-t) + 6*l2.*((b-t).^2) + l1.*((b-t).^3))...
+        + 0.5*((t_i-t).^2).*(6 + 6*l2*(b-t) + 3*l1.*((b-t).^2) + l0.*((b-t).^3))).^2;
+end
